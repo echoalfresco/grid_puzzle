@@ -1,15 +1,15 @@
 export const text = (c) => ({
-  pos: `${c.a} is in slot ${c.n}.`,
-  notpos: `${c.a} is not in slot ${c.n && c.n.join(", ")}.`,
-  end: `${c.a} is at one of the two ends.`,
-  parity: `${c.a} is in an ${c.n} slot.`,
-  left: `${c.a} is somewhere left of ${c.b}.`,
-  immleft: `${c.a} is directly left of ${c.b}.`,
-  adj: `${c.a} is next to ${c.b}.`,
-  notadj: `${c.a} is not next to ${c.b}.`,
-  apart: `${c.a} and ${c.b} are exactly ${c.n} slots apart.`,
-  between: `${c.a} is somewhere between ${c.b} and ${c.c}.`,
-}[c.t]);
+  pos: () => `${c.a} is in slot ${c.n}.`,
+  notpos: () => `${c.a} is not in slot ${c.n.join(", ")}.`,
+  end: () => `${c.a} is at one of the two ends.`,
+  parity: () => `${c.a} is in an ${c.n} slot.`,
+  left: () => `${c.a} is somewhere left of ${c.b}.`,
+  immleft: () => `${c.a} is directly left of ${c.b}.`,
+  adj: () => `${c.a} is next to ${c.b}.`,
+  notadj: () => `${c.a} is not next to ${c.b}.`,
+  apart: () => `${c.a} and ${c.b} are exactly ${c.n} slots apart.`,
+  between: () => `${c.a} is somewhere between ${c.b} and ${c.c}.`,
+}[c.t]());
 
 // pos: map of name -> 0-based slot. Returns true/false, or null if a needed item is unplaced.
 export function check(c, pos, n) {
