@@ -1,6 +1,10 @@
+import { inject } from '@vercel/analytics';
 import { LEVELS } from "./levels.js";
 import { text, check } from "./clues.js";
 import { solve } from "./solver.js";
+
+// Initialize Vercel Web Analytics
+inject();
 
 const $ = (id) => document.getElementById(id);
 const save = JSON.parse(localStorage.getItem("dg-save") || '{"unlocked":0,"stars":{}}');
