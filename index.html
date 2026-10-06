@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dependency Grid</title><link rel="stylesheet" href="css/style.css"></head>
+<body><main>
+<h1>Dependency Grid</h1>
+<p class="sub">Place each item in a slot so every clue is satisfied. One solution per level.</p>
+<div id="levelbar"></div>
+<h2 id="levelname"></h2>
+<div id="progress"><div id="bar"></div></div>
+<ul id="clues"></ul>
+<div id="grid" role="grid"></div>
+<div class="row"><button id="reset">Reset</button><button id="hint">Hint</button><button id="next" hidden>Next level &rarr;</button></div>
+<p id="moves" class="sub"></p>
+<p id="msg" aria-live="polite"></p>
+</main>
+<script type="module" src="js/game.js"></script></body></html>
